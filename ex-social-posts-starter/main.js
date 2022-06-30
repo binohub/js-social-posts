@@ -97,20 +97,15 @@ const posts = [
     }
 ];
 
-// posts.forEach(element => {
-//     console.log(element);
 
-//     // ! create header
-//     const postHeader = document.createElement('div');
-//     postHeader.classList.add('post_header');
-//     // ? post meta
-//     const postMeta = document.createElement('div');
-//     postMeta.classList.add('post-meta');
-//     // ? post meta icon
-//     const postMetaIcon = document.createElement('div');
-//     postMetaIcon.classList.add('post-meta__icon');
-//     // ? post meta icon img
-//     const profilePic = document.createElement('img');
-//     profilePic.classList.add("profile-pic");
-//     profilePic.src = "https://unsplash.it/300/300?image=15";
-// });
+const parent = document.querySelector(".likes js-likes");
+posts.forEach(element => {
+    console.log(element);
+
+    const btnLike = document.querySelector(".like-button");
+    btnLike.addEventListener("click", function () {
+    btnLike.classList.add("like-button--liked");
+    // element["likes"] = element["likes"] + 1;
+    // console.log(element["likes"]);
+    })
+});
